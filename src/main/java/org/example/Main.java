@@ -1,19 +1,64 @@
 package org.example;
 
-import org.example.domain.Operator;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.example.domain.Participant;
+import org.example.repository.databases.ParticipantDBRepo;
+import org.example.utils.DBUtils;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
+
+
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    private static final Logger log = LogManager.getLogger(Main.class);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
+    static void main() {
+        // configurare log4j
+        Properties props = new Properties();
+        try {
+            props.load(new FileReader("bd.config"));
+        } catch (IOException e) {
+            System.out.println("Cannot find bd.config " + e);
+        }
+
+        Main.log.info("Starting application...");
+
+        DBUtils dbUtils = new DBUtils(props);
+
+        ParticipantDBRepo participantRepo = new ParticipantDBRepo(dbUtils);
+
+        try {
+            // adaugare participant
+            Participant p = new Participant("Matei", "9864728361538", 20);
+            participantRepo.add(p);
+            Main.log.info("Participant added!");
+
+            // cautare dupa CNP
+            Participant found = participantRepo.findByCnp("9864728361538");
+
+            if (found != null) {
+                Main.log.info("Found: " + found.getNume() +
+                        ", CNP: " + found.getCnp() +
+                        ", Varsta: " + found.getVarsta());
+            } else {
+                Main.log.warn("Participant not found!");
+            }
+
+            // afisare toti
+            Main.log.info("All participants:");
+            for (Participant part : participantRepo.findAll()) {
+                Main.log.info(part.getId() + " | " +
+                        part.getNume() + " | " +
+                        part.getCnp() + " | " +
+                        part.getVarsta());
+            }
+
+        } catch (Exception ex) {
+            Main.log.error("Error: " + ex.getMessage());
+        } finally {
+            dbUtils.closeConnection();
         }
     }
 }

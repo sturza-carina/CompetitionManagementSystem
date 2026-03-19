@@ -1,0 +1,125 @@
+17 Mar 2026 13:17:34,725 INFO  org.example.Main 26 main - Starting application...
+17 Mar 2026 13:17:34,729 INFO  org.example.repository.databases.ParticipantDBRepo 25 <init> - Initializing ParticipantDBRepo with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db, jdbc.pass=}
+17 Mar 2026 13:17:34,730 TRACE org.example.repository.databases.ParticipantDBRepo 63 add - Enter saving participant {} org.example.domain.Participant@1f97cf0d
+17 Mar 2026 13:17:34,731 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:17:34,731 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:17:34,745 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:17:34,917 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4a83a74a)
+17 Mar 2026 13:17:34,917 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4a83a74a)
+17 Mar 2026 13:17:34,932 TRACE org.example.repository.databases.ParticipantDBRepo 75 add - Exit saved 1 instances 
+17 Mar 2026 13:17:34,939 TRACE org.example.repository.databases.ParticipantDBRepo 82 add - Exit
+17 Mar 2026 13:17:34,939 INFO  org.example.Main 34 main - Participant added!
+17 Mar 2026 13:17:34,940 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:17:34,940 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:17:34,940 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:17:34,942 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5032714f)
+17 Mar 2026 13:17:34,942 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@5032714f)
+17 Mar 2026 13:17:34,945 ERROR org.example.repository.databases.ParticipantDBRepo 55 findByCnp - java.sql.SQLException: no such column: 'id'
+17 Mar 2026 13:17:34,946 WARN  org.example.Main 44 main - Participant not found!
+17 Mar 2026 13:17:34,946 INFO  org.example.Main 48 main - All participants:
+17 Mar 2026 13:17:34,946 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:17:34,947 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:17:34,949 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:17:34,951 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2767e23c)
+17 Mar 2026 13:17:34,952 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@2767e23c)
+17 Mar 2026 13:17:34,953 ERROR org.example.repository.databases.ParticipantDBRepo 152 getAll - java.sql.SQLException: no such column: 'id'
+17 Mar 2026 13:18:04,460 INFO  org.example.Main 26 main - Starting application...
+17 Mar 2026 13:18:04,463 INFO  org.example.repository.databases.ParticipantDBRepo 25 <init> - Initializing ParticipantDBRepo with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db, jdbc.pass=}
+17 Mar 2026 13:18:04,464 TRACE org.example.repository.databases.ParticipantDBRepo 63 add - Enter saving participant {} org.example.domain.Participant@140c9f39
+17 Mar 2026 13:18:04,465 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:18:04,465 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:18:04,470 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:18:04,631 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1349883)
+17 Mar 2026 13:18:04,631 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1349883)
+17 Mar 2026 13:18:04,646 TRACE org.example.repository.databases.ParticipantDBRepo 75 add - Exit saved 1 instances 
+17 Mar 2026 13:18:04,649 TRACE org.example.repository.databases.ParticipantDBRepo 82 add - Exit
+17 Mar 2026 13:18:04,650 INFO  org.example.Main 34 main - Participant added!
+17 Mar 2026 13:18:04,650 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:18:04,650 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:18:04,651 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:18:04,652 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@48bb62)
+17 Mar 2026 13:18:04,652 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@48bb62)
+17 Mar 2026 13:18:04,654 ERROR org.example.repository.databases.ParticipantDBRepo 55 findByCnp - java.sql.SQLException: no such column: 'id'
+17 Mar 2026 13:18:04,654 WARN  org.example.Main 44 main - Participant not found!
+17 Mar 2026 13:18:04,655 INFO  org.example.Main 48 main - All participants:
+17 Mar 2026 13:18:04,655 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:18:04,656 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:18:04,656 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:18:04,657 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@710c2b53)
+17 Mar 2026 13:18:04,657 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@710c2b53)
+17 Mar 2026 13:18:04,657 ERROR org.example.repository.databases.ParticipantDBRepo 152 getAll - java.sql.SQLException: no such column: 'id'
+17 Mar 2026 13:46:54,021 INFO  org.example.Main 26 main - Starting application...
+17 Mar 2026 13:46:54,024 INFO  org.example.repository.databases.ParticipantDBRepo 25 <init> - Initializing ParticipantDBRepo with properties: {jdbc.user=, jdbc.url=jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db, jdbc.pass=}
+17 Mar 2026 13:46:54,025 TRACE org.example.repository.databases.ParticipantDBRepo 63 add - Enter saving participant {} org.example.domain.Participant@140c9f39
+17 Mar 2026 13:46:54,025 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:46:54,026 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:46:54,031 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:46:54,247 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1349883)
+17 Mar 2026 13:46:54,247 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1349883)
+17 Mar 2026 13:46:54,261 TRACE org.example.repository.databases.ParticipantDBRepo 75 add - Exit saved 1 instances 
+17 Mar 2026 13:46:54,267 TRACE org.example.repository.databases.ParticipantDBRepo 82 add - Exit
+17 Mar 2026 13:46:54,267 INFO  org.example.Main 34 main - Participant added!
+17 Mar 2026 13:46:54,267 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:46:54,267 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:46:54,268 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:46:54,269 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@48bb62)
+17 Mar 2026 13:46:54,269 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@48bb62)
+17 Mar 2026 13:46:54,273 INFO  org.example.Main 40 main - Found: Ana, CNP: 6040924875263, Varsta: 21
+17 Mar 2026 13:46:54,274 INFO  org.example.Main 48 main - All participants:
+17 Mar 2026 13:46:54,274 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+17 Mar 2026 13:46:54,275 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+17 Mar 2026 13:46:54,276 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+17 Mar 2026 13:46:54,276 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6e9a5ed8)
+17 Mar 2026 13:46:54,276 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6e9a5ed8)
+17 Mar 2026 13:46:54,278 INFO  org.example.Main 50 main - 1 | Popescu Ion | 1234567890123 | 20
+17 Mar 2026 13:46:54,278 INFO  org.example.Main 50 main - 2 | Popescu Ion | 1234567890123 | 20
+17 Mar 2026 13:46:54,279 INFO  org.example.Main 50 main - 3 | Ana | 6040924875263 | 21
+18 Mar 2026 16:23:11,520 INFO  org.example.Main 26 main - Starting application...
+18 Mar 2026 16:23:11,524 INFO  org.example.repository.databases.ParticipantDBRepo 25 <init> - Initializing ParticipantDBRepo: 
+18 Mar 2026 16:23:11,525 TRACE org.example.repository.databases.ParticipantDBRepo 63 add - Enter saving participant {} org.example.domain.Participant@26275bef
+18 Mar 2026 16:23:11,527 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+18 Mar 2026 16:23:11,527 TRACE org.example.utils.DBUtils 25 getNewConnection - Enter
+18 Mar 2026 16:23:11,533 INFO  org.example.utils.DBUtils 31 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+18 Mar 2026 16:23:11,712 TRACE org.example.utils.DBUtils 45 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+18 Mar 2026 16:23:11,712 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+18 Mar 2026 16:23:11,725 TRACE org.example.repository.databases.ParticipantDBRepo 75 add - Exit saved 1 instances 
+18 Mar 2026 16:23:11,726 TRACE org.example.repository.databases.ParticipantDBRepo 82 add - Exit
+18 Mar 2026 16:23:11,726 INFO  org.example.Main 36 main - Participant added!
+18 Mar 2026 16:23:11,726 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+18 Mar 2026 16:23:11,727 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+18 Mar 2026 16:23:11,732 INFO  org.example.Main 42 main - Found: Alexia, CNP: 6050911952037, Varsta: 20
+18 Mar 2026 16:23:11,732 INFO  org.example.Main 50 main - All participants:
+18 Mar 2026 16:23:11,734 TRACE org.example.utils.DBUtils 50 getConnection - Enter
+18 Mar 2026 16:23:11,734 TRACE org.example.utils.DBUtils 60 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+18 Mar 2026 16:23:11,737 INFO  org.example.Main 52 main - 1 | Popescu Ion | 1234567890123 | 20
+18 Mar 2026 16:23:11,737 INFO  org.example.Main 52 main - 2 | Calin | 5021201394625 | 23
+18 Mar 2026 16:23:11,738 INFO  org.example.Main 52 main - 3 | Ana | 6040924875263 | 21
+18 Mar 2026 16:23:11,738 INFO  org.example.Main 52 main - 4 | Alexia | 6050911952037 | 20
+18 Mar 2026 16:23:11,739 TRACE org.example.utils.DBUtils 65 closeConnection - Enter
+18 Mar 2026 16:23:11,743 INFO  org.example.utils.DBUtils 70 closeConnection - Connection closed
+18 Mar 2026 16:23:11,743 TRACE org.example.utils.DBUtils 76 closeConnection - Exit
+19 Mar 2026 10:43:45,602 INFO  org.example.Main 26 main - Starting application...
+19 Mar 2026 10:43:45,608 INFO  org.example.repository.databases.ParticipantDBRepo 25 <init> - Initializing ParticipantDBRepo: 
+19 Mar 2026 10:43:45,609 TRACE org.example.repository.databases.ParticipantDBRepo 63 add - Enter saving participant {} org.example.domain.Participant@26275bef
+19 Mar 2026 10:43:45,609 TRACE org.example.utils.DBUtils 48 getConnection - Enter
+19 Mar 2026 10:43:45,610 TRACE org.example.utils.DBUtils 23 getNewConnection - Enter
+19 Mar 2026 10:43:45,618 INFO  org.example.utils.DBUtils 29 getNewConnection - Trying to connect to database jdbc:sqlite:D:/an2/sem4/MPP/Laborator/ProjectJava/Lab4/concurs.db
+19 Mar 2026 10:43:45,806 TRACE org.example.utils.DBUtils 43 getNewConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+19 Mar 2026 10:43:45,807 TRACE org.example.utils.DBUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+19 Mar 2026 10:43:45,819 TRACE org.example.repository.databases.ParticipantDBRepo 75 add - Exit saved 1 instances 
+19 Mar 2026 10:43:45,820 TRACE org.example.repository.databases.ParticipantDBRepo 82 add - Exit
+19 Mar 2026 10:43:45,820 INFO  org.example.Main 36 main - Participant added!
+19 Mar 2026 10:43:45,820 TRACE org.example.utils.DBUtils 48 getConnection - Enter
+19 Mar 2026 10:43:45,821 TRACE org.example.utils.DBUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+19 Mar 2026 10:43:45,828 INFO  org.example.Main 42 main - Found: Matei, CNP: 9864728361538, Varsta: 20
+19 Mar 2026 10:43:45,829 INFO  org.example.Main 50 main - All participants:
+19 Mar 2026 10:43:45,829 TRACE org.example.utils.DBUtils 48 getConnection - Enter
+19 Mar 2026 10:43:45,829 TRACE org.example.utils.DBUtils 58 getConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7d9d0818)
+19 Mar 2026 10:43:45,833 INFO  org.example.Main 52 main - 1 | Popescu Ion | 1234567890123 | 20
+19 Mar 2026 10:43:45,833 INFO  org.example.Main 52 main - 2 | Calin | 5021201394625 | 23
+19 Mar 2026 10:43:45,833 INFO  org.example.Main 52 main - 3 | Ana | 6040924875263 | 21
+19 Mar 2026 10:43:45,833 INFO  org.example.Main 52 main - 4 | Alexia | 6050911952037 | 20
+19 Mar 2026 10:43:45,834 INFO  org.example.Main 52 main - 5 | Matei | 9864728361538 | 20
+19 Mar 2026 10:43:45,836 TRACE org.example.utils.DBUtils 63 closeConnection - Enter
+19 Mar 2026 10:43:45,839 INFO  org.example.utils.DBUtils 68 closeConnection - Connection closed
+19 Mar 2026 10:43:45,839 TRACE org.example.utils.DBUtils 74 closeConnection - Exit
