@@ -30,6 +30,7 @@ public class OperatorDBRepo implements IOperatorRepository {
 
     @Override
     public Operator findByUsername(String username) {
+        logger.info("Searching for username: " + username);
         String sql = "SELECT * FROM operatori WHERE username = ?";
         Connection conn = dbUtils.getConnection();
 
@@ -40,7 +41,7 @@ public class OperatorDBRepo implements IOperatorRepository {
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()) {
-                long id = rs.getInt("id");
+                long id = rs.getInt("id_operator");
                 String user_name = rs.getString("username");
                 String password = rs.getString("password");
 
@@ -49,6 +50,7 @@ public class OperatorDBRepo implements IOperatorRepository {
 
                 return op;
             }
+
 
         } catch(SQLException e){
             logger.error(e);

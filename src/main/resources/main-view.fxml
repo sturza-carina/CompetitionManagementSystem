@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controller.MainController"
+      spacing="15" style="-fx-padding: 15;">
+
+    <TitledPane text="Probe disponibile" style="-fx-font-weight: bold;">
+        <VBox spacing="10" style="-fx-padding: 10;">
+            <TableView fx:id="tableProbe" prefWidth="380" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="colSelect" text="Select" prefWidth="60"/>
+                    <TableColumn fx:id="numeProba" text="Nume" prefWidth="130"/>
+                    <TableColumn fx:id="categorie" text="Categorie varsta" prefWidth="120"/>
+                    <TableColumn fx:id="nrInscrisi" text="Nr. inscrisi" prefWidth="100"/>
+                </columns>
+            </TableView>
+
+            <Button text="Logout" prefWidth="100" prefHeight="30"
+                    onAction="#onLogout"
+                    style="-fx-alignment: center;"/>
+        </VBox>
+    </TitledPane>
+
+
+    <VBox spacing="15">
+
+        <TitledPane text="Participanti" style="-fx-font-weight: bold;">
+            <VBox spacing="10" style="-fx-padding: 10;">
+
+                <TableView fx:id="tableParticipanti" prefWidth="420" prefHeight="180">
+                    <columns>
+                        <TableColumn fx:id="numeParticipant" text="Nume" prefWidth="250"/>
+                        <TableColumn fx:id="varsta" text="Varsta" prefWidth="80"/>
+                    </columns>
+                </TableView>
+
+                <Button text="Sterge participant" prefWidth="150" prefHeight="30"
+                        onAction="#onSterge"
+                        style="-fx-alignment: center;"/>
+            </VBox>
+        </TitledPane>
+
+
+        <TitledPane text="Inscriere participant" style="-fx-font-weight: bold;">
+            <VBox spacing="8" style="-fx-padding: 10;">
+                <Label text="Nume"/>
+                <TextField fx:id="txtNume" promptText="Nume participant"
+                           prefHeight="28"/>
+
+                <Label text="CNP"/>
+                <TextField fx:id="txtCnp" promptText="CNP participant"
+                           prefHeight="28"/>
+
+                <Button text="Inscrie" prefWidth="100" prefHeight="30"
+                        onAction="#onInscriere"
+                        style="-fx-alignment: center;"/>
+
+                <Label fx:id="lblError" textFill="red"
+                       style="-fx-alignment: center;"/>
+            </VBox>
+        </TitledPane>
+
+    </VBox>
+</HBox>

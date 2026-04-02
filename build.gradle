@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.14'
 }
 
 group = 'org.example'
@@ -10,19 +11,44 @@ repositories {
     mavenCentral()
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 dependencies {
+    // JavaFX
+    implementation 'org.openjfx:javafx-controls:17.0.2'
+    implementation 'org.openjfx:javafx-fxml:17.0.2'
+
+    // ControlsFX, FormsFX, BootstrapFX
+    implementation 'org.controlsfx:controlsfx:11.1.1'
+    implementation 'com.dlsc.formsfx:formsfx-core:11.5.0'
+    implementation 'org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0'
+
+    // Database
     implementation 'org.xerial:sqlite-jdbc:3.45.1.0'
 
     implementation 'com.google.guava:guava:33.0.0-jre'
 
     implementation 'org.slf4j:slf4j-simple:2.0.9'
 
+    // BCrypt
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+    // Logging
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.1'
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.22.1'
 
+    // Testing
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+javafx {
+    version = '17.0.2'
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
 }
 
 application {
