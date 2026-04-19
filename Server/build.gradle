@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'Lab7'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project (':Model')
+    implementation project (':Services')
+    implementation project (':Persistence')
+    implementation project (':Networking')
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.22.1'
+
+    implementation 'org.mindrot:jbcrypt:0.4'
+
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application{
+    mainClass='StartJsonServer'
+}
+
+
+test {
+    useJUnitPlatform()
+}

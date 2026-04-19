@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="client.gui.MainController"
+      spacing="10" style="-fx-padding: 10;">
+
+    <!-- SUS: splitpane în loc de HBox -->
+    <SplitPane VBox.vgrow="ALWAYS">
+
+        <!-- Probe -->
+        <TitledPane text="Probe disponibile" collapsible="false">
+            <VBox spacing="5" style="-fx-padding: 5;">
+                <TableView fx:id="tableProbe" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="colSelect" text="Select"/>
+                        <TableColumn fx:id="numeProba" text="Nume" prefWidth="150"/>
+                        <TableColumn fx:id="categorie" text="Categorie varsta"/>
+                        <TableColumn fx:id="nrInscrisi" text="Nr. inscrisi"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </TitledPane>
+
+        <!-- Participanti -->
+        <TitledPane text="Participanti" collapsible="false">
+            <VBox spacing="5" style="-fx-padding: 5;">
+                <TableView fx:id="tableParticipanti" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="numeParticipant" text="Nume"/>
+                        <TableColumn fx:id="varsta" text="Varsta"/>
+                    </columns>
+                </TableView>
+
+                <HBox alignment="CENTER">
+                    <Button text="Sterge participant" onAction="#onSterge"/>
+                </HBox>
+
+            </VBox>
+        </TitledPane>
+
+    </SplitPane>
+
+    <!-- JOS -->
+    <HBox spacing="10" alignment="BOTTOM_LEFT">
+
+        <TitledPane text="Inscriere participant" collapsible="false">
+            <HBox spacing="10" style="-fx-padding: 5;" alignment="BOTTOM_LEFT">
+
+                <VBox spacing="3">
+                    <Label text="Nume"/>
+                    <TextField fx:id="txtNume" promptText="Nume participant" prefWidth="150"/>
+                </VBox>
+
+                <VBox spacing="3">
+                    <Label text="CNP"/>
+                    <TextField fx:id="txtCnp" promptText="CNP participant"/>
+                </VBox>
+
+                <VBox spacing="3" alignment="BOTTOM_LEFT">
+                    <Label text=""/>
+                    <Button text="Inscrie" onAction="#onInscriere"/>
+                </VBox>
+
+                <Label fx:id="lblError" textFill="red"/>
+
+            </HBox>
+        </TitledPane>
+
+        <HBox alignment="TOP_RIGHT">
+            <Button text="Logout"
+                onAction="#onLogout" alignment="CENTER"/>
+        </HBox>
+
+    </HBox>
+
+</VBox>
