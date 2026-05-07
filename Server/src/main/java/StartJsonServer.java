@@ -8,6 +8,8 @@ import persistence.databases.InscriereDBRepo;
 import persistence.databases.OperatorDBRepo;
 import persistence.databases.ParticipantDBRepo;
 import persistence.databases.ProbaDBRepo;
+import persistence.hibernate.ParticipantHibernateRepo;
+import persistence.hibernate.ProbaHibernateRepo;
 import persistence.interfaces.IInscriereRepository;
 import persistence.interfaces.IOperatorRepository;
 import persistence.interfaces.IParticipantRepository;
@@ -37,13 +39,11 @@ public class StartJsonServer {
         }
 
         DBUtils dbUtilsOperator = new DBUtils(serverProps);
-        DBUtils dbUtilsParticipant = new DBUtils(serverProps);
-        DBUtils dbUtilsProba = new DBUtils(serverProps);
         DBUtils dbUtilsInscriere = new DBUtils(serverProps);
 
         IOperatorRepository operatorRepo = new OperatorDBRepo(dbUtilsOperator);
-        IParticipantRepository participantRepo = new ParticipantDBRepo(dbUtilsParticipant);
-        IProbaRepository probaRepo = new ProbaDBRepo(dbUtilsProba);
+        IParticipantRepository participantRepo = new ParticipantHibernateRepo();
+        IProbaRepository probaRepo = new ProbaHibernateRepo();
         IInscriereRepository inscriereRepo = new InscriereDBRepo(dbUtilsInscriere, participantRepo, probaRepo);
 
         IServices serviceImpl = new ServicesImpl(
@@ -69,8 +69,6 @@ public class StartJsonServer {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
             logger.info("Shutting down server, closing DB connections...");
             dbUtilsOperator.closeConnection();
-            dbUtilsParticipant.closeConnection();
-            dbUtilsProba.closeConnection();
             dbUtilsInscriere.closeConnection();
             logger.info("All DB connections closed.");
         }));

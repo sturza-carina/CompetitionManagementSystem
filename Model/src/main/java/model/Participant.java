@@ -1,10 +1,22 @@
 package model;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.Column;
+import jakarta.persistence.Table;
 
+@jakarta.persistence.Entity
+@Table(name = "participanti")
+@AttributeOverride(name = "id", column = @Column(name = "id_participant"))
 public class Participant extends Entity<Long> {
+    @Column(name = "nume", nullable = false)
     private String nume;
+    @Column(name = "cnp", nullable = false, unique = true)
     private String cnp;
+    @Column(name = "varsta", nullable = false)
     private int varsta;
+
+    // constructor implicit
+    public Participant() {}
 
     public Participant(String nume, String cnp, int varsta) {
         this.nume = nume;

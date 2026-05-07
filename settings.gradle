@@ -1,4 +1,4 @@
-rootProject.name = 'Lab7'
+rootProject.name = 'Lab10'
 include 'Model'
 include 'Persistence'
 include 'Networking'

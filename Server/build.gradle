@@ -3,7 +3,7 @@ plugins {
     id 'application'
 }
 
-group = 'Lab7'
+group = 'Lab10'
 version = '1.0-SNAPSHOT'
 
 repositories {
