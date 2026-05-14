@@ -5,3 +5,6 @@ include 'Networking'
 include 'Server'
 include 'Services'
 include 'Client'
+include 'RestServer'
+
+include 'JavaClient'

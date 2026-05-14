@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':Model')
+    implementation project(':Persistence')
+
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.22.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.22.1'
+
+    // REST
+    implementation 'org.springframework:spring-webmvc:6.1.3'
+    implementation 'org.springframework.boot:spring-boot:3.2.0'
+    implementation 'org.springframework.boot:spring-boot-autoconfigure:3.2.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+
+    // Tomcat embedded
+    implementation 'org.apache.tomcat.embed:tomcat-embed-core:10.1.18'
+    implementation 'org.apache.tomcat.embed:tomcat-embed-websocket:10.1.18'
+    implementation project(':Services')
+
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}
