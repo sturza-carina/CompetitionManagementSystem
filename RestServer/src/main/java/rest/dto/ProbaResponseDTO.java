@@ -1,4 +1,4 @@
-package rest;
+package rest.dto;
 
 /**
  * DTO folosit in RASPUNSURI - include intotdeauna id-ul resursei.

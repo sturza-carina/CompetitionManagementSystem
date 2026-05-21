@@ -1,4 +1,4 @@
-package rest;
+package rest.controller;
 
 import model.Proba;
 import org.apache.logging.log4j.LogManager;
@@ -7,8 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import persistence.interfaces.IProbaRepository;
-import rest.ProbaDTO;
-import rest.ProbaResponseDTO;
+import rest.dto.ProbaDTO;
+import rest.dto.ProbaResponseDTO;
 import services.InscriereException;
 
 import java.util.List;
@@ -26,6 +26,7 @@ import java.util.stream.StreamSupport;
  *   PUT    /probe/{id}                     - modifica proba existenta
  *   DELETE /probe/{id}                     - sterge proba
  */
+// @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/probe")
 public class ProbaRestController {
@@ -37,20 +38,6 @@ public class ProbaRestController {
     public ProbaRestController(IProbaRepository probaRepository) {
         this.probaRepository = probaRepository;
     }
-
-    // GET /probe  ->  returneaza toate probele
-//    @GetMapping
-//    public ResponseEntity<List<ProbaResponseDTO>> getAllProbe() {
-//        logger.info("GET /probe - afisare toate probele");
-//
-//        List<ProbaResponseDTO> result = StreamSupport
-//                .stream(probaRepository.findAll().spliterator(), false)
-//                .map(this::toResponseDTO)
-//                .collect(Collectors.toList());
-//
-//        logger.info("Returnate {} probe", result.size());
-//        return ResponseEntity.ok(result);
-//    }
 
     // GET /probe  ->  returneaza toate probele
     // GET /probe?categorie=6-8  ->  filtru dupa categorieVarsta
@@ -91,24 +78,6 @@ public class ProbaRestController {
 
         return ResponseEntity.ok(toResponseDTO(proba));
     }
-
-
-//    // GET /probe?categorie=6-8  ->  filtru dupa categorieVarsta
-//    @GetMapping
-//    public ResponseEntity<List<ProbaResponseDTO>> getProbeByCategorie(
-//            @RequestParam("categorie") String categorie) {
-//
-//        logger.info("GET /probe?categorie={} - filtrare", categorie);
-//
-//        List<ProbaResponseDTO> result = StreamSupport
-//                .stream(probaRepository.findByCategorieVarsta(categorie).spliterator(), false)
-//                .map(this::toResponseDTO)
-//                .collect(Collectors.toList());
-//
-//        logger.info("Gasite {} probe pentru categoria {}", result.size(), categorie);
-//        return ResponseEntity.ok(result);
-//    }
-
 
     // POST /probe  ->  adauga proba noua
     //   - body: { "nume": "...", "categorieVarsta": "..." }  (fara id!)

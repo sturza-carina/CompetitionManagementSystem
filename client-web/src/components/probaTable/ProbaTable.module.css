@@ -1,0 +1,168 @@
+.wrapper {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.tableHeader {
+    padding: 14px 22px;
+    border-bottom: 1px solid var(--border);
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+    background: var(--surface2);
+}
+
+.filterTag {
+    color: var(--accent);
+}
+
+.tableScroll {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead tr {
+    background: var(--surface2);
+}
+
+.table th {
+    padding: 12px 22px;
+    text-align: left;
+    font-size: 10px;
+    font-family: 'DM Mono', monospace;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+}
+
+.thId {
+    width: 80px;
+}
+
+.thActions {
+    width: 100px;
+    text-align: right;
+}
+
+.row {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.12s;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.row:hover {
+    background: var(--surface2);
+}
+
+.table td {
+    padding: 13px 22px;
+    font-size: 14px;
+}
+
+.idBadge {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.tdNume {
+    font-weight: 600;
+}
+
+.catBadge {
+    display: inline-block;
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    color: var(--cat-color);
+    background: color-mix(in srgb, var(--cat-color) 12%, transparent);
+    border: 1px solid color-mix(in srgb, var(--cat-color) 30%, transparent);
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.tdActions {
+    text-align: right;
+}
+
+.action {
+    background: none;
+    border: 1px solid var(--border-bright);
+    color: var(--text-muted);
+    width: 30px;
+    height: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.15s;
+    margin-left: 6px;
+}
+
+.actionEdit:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(91,143,255,0.1);
+}
+
+.actionDelete:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+    background: rgba(255,95,95,0.1);
+}
+
+.state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.emptyIcon {
+    font-size: 36px;
+    color: var(--border-bright);
+}
+
+.spinner {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--border-bright);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.action:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.actionEdit:disabled:hover {
+    border-color: var(--border-bright);
+    color: var(--text-muted);
+    background: none;
+}
+
+.actionDelete:disabled:hover {
+    border-color: var(--border-bright);
+    color: var(--text-muted);
+    background: none;
+}
